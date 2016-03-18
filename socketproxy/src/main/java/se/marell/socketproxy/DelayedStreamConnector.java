@@ -21,7 +21,6 @@ public class DelayedStreamConnector implements Runnable {
         this.packetDelay = packetDelay;
     }
 
-    @Override
     public void run() {
         try {
             final int packetSize = 1024;
