@@ -17,17 +17,14 @@ public class SpringWayPlugin implements JmdtCompetitorPlugin {
     private List<? extends AbstractJpaHierarchyReader> hierarchyReaderCompetitors = Arrays.asList(new SpringReader());
     private List<? extends AbstractHierarchyReaderWriter> nonJpaCompetitors = Collections.emptyList();
 
-    @Override
     public List<? extends AbstractJpaHierarchyWriter> getHierarchyWriterCompetitors() {
         return hierarchyWriterCompetitors;
     }
 
-    @Override
     public List<? extends AbstractJpaHierarchyReader> getHierarchyReaderCompetitors() {
         return hierarchyReaderCompetitors;
     }
 
-    @Override
     public List<? extends AbstractHierarchyReaderWriter> getNonJpaCompetitors() {
         return nonJpaCompetitors;
     }

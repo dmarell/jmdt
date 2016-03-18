@@ -17,17 +17,14 @@ public class MarellWayPlugin implements JmdtCompetitorPlugin {
     private List<? extends AbstractJpaHierarchyReader> hierarchyReaderCompetitors = Collections.emptyList();
     private List<? extends AbstractHierarchyReaderWriter> nonJpaCompetitors = Collections.emptyList();
 
-    @Override
     public List<? extends AbstractJpaHierarchyWriter> getHierarchyWriterCompetitors() {
         return hierarchyWriterCompetitors;
     }
 
-    @Override
     public List<? extends AbstractJpaHierarchyReader> getHierarchyReaderCompetitors() {
         return hierarchyReaderCompetitors;
     }
 
-    @Override
     public List<? extends AbstractHierarchyReaderWriter> getNonJpaCompetitors() {
         return nonJpaCompetitors;
     }
