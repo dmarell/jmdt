@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+<div id="center">
+    <table>
+        <tr>
+            <td>
+                <div class="code">
+                    <pre>
+@Entity
+public class Customer {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Integer id;
+
+    @Column(name = "customer_no", nullable = false, length = 12, unique = true)
+    private String customerNo;
+
+    @OneToMany(mappedBy = "customer")
+    private Set&lt;CustomerOrder&gt; customerOrders = new HashSet&lt;CustomerOrder&gt;();
+
+    ...
+}
+                    </pre>
+                </div>
+            </td>
+        </tr>
+    </table>
+    Hej.
+</div>
+</body>
+</html>

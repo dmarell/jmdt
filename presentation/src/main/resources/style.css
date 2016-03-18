@@ -1,0 +1,75 @@
+body {
+    background: #00008b;
+    color: #f5f5f5;
+    /*margin: 50px 0px;*/
+    /*padding: 0px;*/
+    text-align: center;
+}
+
+.presentation-pane {
+    background: #00008b;
+    color: #f5f5f5;
+    text-align: center;
+}
+
+#center {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
+}
+
+h1 {
+    font-size: 300%;
+}
+
+.code {
+    font-family:"Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 150%;
+    /*color: #f5f5f5;*/
+    color: red;
+}
+
+#code {
+    font-family:"Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 150%;
+    /*color: #f5f5f5;*/
+    color: red;
+}
+
+/*#html, body {*/
+    /*top: 0px;*/
+    /*right: 0px;*/
+    /*bottom: 0px;*/
+    /*left: 0px;*/
+    /*width:980px;*/
+    /*height: 100%;*/
+    /*margin: auto;*/
+/*}*/
+/*#wrapper {*/
+/*display: table;*/
+/*}*/
+
+/*#cell {*/
+/*display: table-cell;*/
+/*vertical-align: middle;*/
+/*text-align: center;*/
+/*}*/
+
+/*#content {*/
+/*position: absolute;*/
+/*top: 50%;*/
+/*height: 240px;*/
+/*margin-top: -120px; *//* negative half of the height */
+/*text-align: center;*/
+/*}*/
+
+/*#floater	{float:left; height:50%; margin-bottom:-120px;}*/
+/*#content	{clear:both; height:240px; position:relative;}*/
+
+

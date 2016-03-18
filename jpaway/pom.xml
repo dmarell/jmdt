@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>jmdt</artifactId>
+        <groupId>se.marell.jmdt</groupId>
+        <version>1.0</version>
+    </parent>
+
+    <artifactId>jpaway</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>se.marell</groupId>
+            <artifactId>dcommons</artifactId>
+            <version>2.0.9</version>
+        </dependency>
+        <dependency>
+            <groupId>se.marell.jmdt</groupId>
+            <artifactId>commons</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>se.marell.jmdt</groupId>
+            <artifactId>entity</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>se.marell</groupId>
+            <artifactId>jpatools</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+    </dependencies>
+
+
+</project>

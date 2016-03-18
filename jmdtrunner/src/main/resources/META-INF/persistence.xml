@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+
+    <persistence-unit name="hibernate" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <class>entity.Customer</class>
+        <class>entity.CustomerOrder</class>
+        <class>entity.OrderLine</class>
+        <class>entity.Product</class>
+        <properties>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.connection.username" value="test1"/>
+            <property name="hibernate.connection.password" value="test123"/>
+            <!-- <property name="hibernate.showsql" value="true"/> -->
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="openjpa" transaction-type="RESOURCE_LOCAL">
+        <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
+        <class>entity.Customer</class>
+        <class>entity.CustomerOrder</class>
+        <class>entity.OrderLine</class>
+        <class>entity.Product</class>
+        <properties>
+            <property name="openjpa.ConnectionUserName" value="test1"/>
+            <property name="openjpa.ConnectionPassword" value="test123"/>
+            <property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)"/>
+            <!--<property name="openjpa.Log" value="File=jmdt-openjpa-log.txt, SQL=TRACE"/>-->
+            <property name="openjpa.Log" value="log4j"/>
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="eclipse" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>entity.Customer</class>
+        <class>entity.CustomerOrder</class>
+        <class>entity.OrderLine</class>
+        <class>entity.Product</class>
+        <properties>
+            <property name="javax.persistence.jdbc.user" value="test1"/>
+            <property name="javax.persistence.jdbc.password" value="test123"/>
+
+            <property name="eclipselink.session.customizer" value="se.marell.jmdt.eclipse.JPAEclipseLinkSessionCustomizer"/>
+            <!--<property name="eclipselink.logging.logger" value="org.eclipse.persistence.logging.CommonsLoggingSessionLog"/>-->
+            <!--<property name="eclipselink.logging.logger" value="JavaLogger"/>-->
+            <!--<property name="eclipselink.logging.level" value="FINE"/>-->
+            <property name="eclipselink.logging.level.sql" value="FINE"/>
+            <!--<property name="eclipselink.logging.parameters" value="true"/>-->
+        </properties>
+    </persistence-unit>
+
+    <!-- hsqldb -->
+    <persistence-unit name="jpatest-unit-test" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <class>entity.Customer</class>
+        <class>entity.CustomerOrder</class>
+        <class>entity.OrderLine</class>
+        <class>entity.Product</class>
+        <properties>
+            <property name="hibernate.connection.url" value="jdbc:hsqldb:mem:unit-test"/>
+            <property name="hibernate.connection.driver_class" value="org.hsqldb.jdbcDriver"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+            <property name="hibernate.connection.username" value="sa"/>
+            <property name="hibernate.connection.password" value="sa"/>
+            <!--<property name="hibernate.show_sql" value="true"/>-->
+        </properties>
+    </persistence-unit>
+
+</persistence>

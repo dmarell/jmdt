@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+    <persistence-unit name="openjpa" transaction-type="RESOURCE_LOCAL">
+        <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
+        <class>entity.Customer</class>
+        <class>entity.CustomerOrder</class>
+        <class>entity.OrderLine</class>
+        <class>entity.Product</class>
+        <properties>
+            <property name="openjpa.ConnectionUserName" value="test1"/>
+            <property name="openjpa.ConnectionPassword" value="test123"/>
+            <property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)"/>
+            <!--<property name="openjpa.Log" value="File=jmdt-openjpa-log.txt, SQL=TRACE"/>-->
+            <property name="openjpa.Log" value="log4j"/>
+        </properties>
+    </persistence-unit>
+</persistence>
